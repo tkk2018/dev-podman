@@ -1,12 +1,14 @@
 # MYSQL
 
-Pull from dockerhub
+## Setup
+
+Pulling the MYSQL image from the dockerhub
 
 ```
 podman pull docker.io/library/mysql:8.0.32
 ```
 
-Run the mysql:8.0.32
+Create a container and run the image
 
 ```
 podman run --name mysql-8_0_32 -e MYSQL_ROOT_PASSWORD=db_root_pwd -d -p 3306:3306 -v mysql-8_0_32-data:/var/lib/mysql mysql:8.0.32
@@ -26,10 +28,15 @@ To start after exist
 
 ```
 // find the container ID.
-padman ps --all
+podman ps --all
 
 // then start the container by ID
 podman start container-id
 ```
 
 Note that the port cannot be changed once the volume created.
+
+## References
+
+- [Deploying a MySQL Database Using Podman](https://infotechys.com/deploying-mysql-using-podman)
+- [Podman (or docker) running a MySQL container and a shared data directory - Server Fault](https://serverfault.com/questions/1110764/podman-or-docker-running-a-mysql-container-and-a-shared-data-directory)
