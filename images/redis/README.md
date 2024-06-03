@@ -34,6 +34,12 @@ podman ps --all
 podman start container-id
 ```
 
+To stop
+
+```
+podman start container-id
+```
+
 Note that the port cannot be changed once the volume created.
 
 ## Reference
