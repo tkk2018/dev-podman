@@ -8,4 +8,4 @@ podman machine init
 podman machine start
 ```
 
-Note the `podman machine start` is required after the host machine restart.
+Note the `podman machine start` is required after the host(non-linux, including imac) machine restart.
