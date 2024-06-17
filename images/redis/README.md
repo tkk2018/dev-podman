@@ -42,6 +42,12 @@ podman start container-id
 
 Note that the port cannot be changed once the volume created.
 
+## Interactive
+
+```
+podman exec -it <container-id> redis-cli
+```
+
 ## Reference
 
 * [Using systemd to control the startup of Podman containers](https://podman.io/blogs/2018/09/13/systemd#:~:text=podman%20pull%20docker.io%2Fredis%20sudo%20podman%20run%20-d%20--name,CONTAINER%20ID%20IMAGE%20COMMAND%20CREATED%20STATUS%20PORTS%20NAMES)
