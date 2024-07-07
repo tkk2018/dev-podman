@@ -42,6 +42,13 @@ podman start container-id
 
 Note that the port cannot be changed once the volume created.
 
+To login
+```
+podman exec -it container-id /bin/bash
+# -h = hostname, -p = password, -u = username
+mysql -u root -p
+```
+
 ## References
 
 - [Deploying a MySQL Database Using Podman](https://infotechys.com/deploying-mysql-using-podman)
