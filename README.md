@@ -1,7 +1,7 @@
 # Podman
 
 > [!NOTE]
-> This document is wrote based on the `podman version 5.2.5`.
+> This document is written based on the `podman version 5.2.5` and has been tested.
 
 ## Installation
 
@@ -78,17 +78,23 @@
 > podman machine ssh --help
 > ```
 > 
-> For example, pushing images from the local environment to a custom registry (images hub) requires adding the custom registry endpoint in the `/etc/containers/registries.conf`.<sup>[\[1\]](https://podman-desktop.io/docs/containers/registries)</sup>.
+> For example, pushing images from the local environment to a custom registry (images hub) requires adding the custom registry endpoint in the `/etc/containers/registries.conf`.<sup>[\[1\]](https://podman-desktop.io/docs/containers/registries)</sup>
+>
 > So, the `/etc/containers/registries.conf` file is located in the `podman machine`.
 >
 > ```
 > podman machine ssh
 > sudo nano /etc/containers/registries.conf
+>
+> # After editing successfully, exit and restart the Podman machine.
+> exit
+> podman machine stop
+> podman machine start
 > ```
 
-#### MAC
+### MAC
 
-##### brew
+Although it is not recommended to install via `brew`, it has been tested and works. The Podman Desktop is not necessary.
 
 ```
 brew install podman
