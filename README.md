@@ -70,7 +70,7 @@
 
 > [!IMPORTANT]
 > For some custom and advanced use cases, it is required to change the `podman` configuration.
-> These configurations need to be changed in the `podman machine`, not the host machine.
+> These configurations need to be changed in the `podman machine`, not the host machine.<sup>[\[1\]](https://github.com/containers/podman/issues/16664#issuecomment-1356851109)</sup>
 >
 > To do this, use the `podman machine ssh` command to log in to the machine and make the necessary configuration changes.
 > 
