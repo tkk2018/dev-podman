@@ -19,11 +19,11 @@ Create a container and run the image
 
 > [!NOTE]
 > The command below doesn’t attach a persistence volume to the container.
-> 
+>
 > Use the `-v` if required, for example `-v rabbitmq-3_13_6-data:/var/lib/rabbitmq`
 
 ```
-podman run -d --hostname my-rabbit --name some-rabbit -p 5672:5672 -p 15672:15672 rabbitmq:3.13.6-management
+podman run -d --name rabbitmq_3_13_6-management  -p 5672:5672 -p 15672:15672 rabbitmq:3.13.6-management
 ```
 
 To login
